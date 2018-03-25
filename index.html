@@ -6847,6 +6847,7 @@ function createRequesterBP() {
 	}
 	catch(e) {
 		document.getElementById("out").innerText = e.toString();
+		return;
 	}
 	
 	let inputEntities = {};
