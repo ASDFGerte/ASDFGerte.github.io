@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Blueprint placement anchor editor</title>
+    <link rel='stylesheet' href='css/style.css'>
+</head>
+<body>
+    <p>First version that worked at all. Sets the point in the blueprint where the mouse is when placing.</p>
+    <div>
+        <form onsubmit="BlueprintAnchorChanger.loadBlueprint(); return false;">
+            <div>
+                <label for="in">Blueprint to set the anchor for: </label>
+                <br />
+                <input type="text" id="in" size="128" required>
+                <span class="validity"></span>
+            </div>
+            <div>
+                <button>Load</button>
+            </div>
+        </form>
+    </div>
+    <div>
+        <form onsubmit="BlueprintAnchorChanger.generateAnchoredBlueprint(); return false;">
+            <div class="anchorsetting">
+                <label for="quickchange">Quick anchor change: </label>
+                <br />
+                <table id="quickchange">
+                    <tr>
+                        <td><input type="radio" class="anchor" name="anchor" position="0" disabled /></td>
+                        <td><input type="radio" class="anchor" name="anchor" position="1" disabled /></td>
+                        <td><input type="radio" class="anchor" name="anchor" position="2" disabled /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" class="anchor" name="anchor" position="3" disabled /></td>
+                        <td><input type="radio" class="anchor" name="anchor" position="4" disabled checked /></td>
+                        <td><input type="radio" class="anchor" name="anchor" position="5" disabled /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" class="anchor" name="anchor" position="6" disabled /></td>
+                        <td><input type="radio" class="anchor" name="anchor" position="7" disabled /></td>
+                        <td><input type="radio" class="anchor" name="anchor" position="8" disabled /></td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <button id="setanchor" disabled >Set Anchor</button>
+            </div>
+        </form>
+    </div>
+    <div>
+        <label for="out">Blueprint with new anchor: </label>
+        <br />
+        <textarea id="out" cols="128" rows="8" readonly>*sample output*</textarea>
+    </div>
+
+    <!-- https://github.com/nodeca/pako javascript zlib port under MIT license -->
+    <script src="libraries/pako.min.js"></script>
+    <script src="blueprintTools.js"></script>
+</body>
+</html>

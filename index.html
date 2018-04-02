@@ -1,30 +1,30 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8"/>
-<title>[ALPHA 0.0.1] Requester Chest For Blueprints</title>
+    <meta charset="utf-8" />
+    <title>[ALPHA 0.0.1] Requester Chest For Blueprints</title>
 </head>
 <body>
-	<p>First version that worked at all. Converts a factorio BP into an output BP that consists of requester chests which request the items needed for the input BP.</p>
-	<br/>
-	<form onsubmit="createRequesterBP(); return false;">
-	  <div>
-		<label for="in">Blueprint to get requester chests BP for: </label>
-		<br/>
-		<input type="text" id="in" size="128" required>
-		<span class="validity"></span>
-	  </div>
-	  <div>
-		<button>Submit</button>
-	  </div>
-	</form>
-	<br/>
-	<label for="out">Requester chest blueprint string: </label>
-	<br/>
-	<textarea id="out" cols="128" rows="8">*sample output*</textarea>
-	
-<!-- https://github.com/nodeca/pako javascript zlib port under MIT license -->
-<script src="pako.min.js"></script>
-<script src="createRequesterBP.js"></script>
+    <p>First version that worked at all. Converts a factorio BP into an output BP that consists of requester chests which request the items needed for the input BP.</p>
+    <br />
+    <form onsubmit="createRequesterBP(); return false;">
+        <div>
+            <label for="in">Blueprint to get requester chests BP for: </label>
+            <br />
+            <input type="text" id="in" size="128" required>
+            <span class="validity"></span>
+        </div>
+        <div>
+            <button>Submit</button>
+        </div>
+    </form>
+    <br />
+    <label for="out">Requester chest blueprint string: </label>
+    <br />
+    <textarea id="out" cols="128" rows="8">*sample output*</textarea>
+
+    <!-- https://github.com/nodeca/pako javascript zlib port under MIT license -->
+    <script src="libraries/pako.min.js"></script>
+    <script src="blueprintTools.js"></script>
 </body>
 </html>
