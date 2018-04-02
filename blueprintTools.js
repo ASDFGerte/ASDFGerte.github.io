@@ -75,12 +75,12 @@ var BlueprintAnchorChanger = (function () {
         var anchor = [
             {
                 0: this._blueprintCorners[0][0],
-                1: (this._blueprintCorners[0][1] - this._blueprintCorners[0][0]) / 2,
+                1: (this._blueprintCorners[0][1] + this._blueprintCorners[0][0]) / 2,
                 2: this._blueprintCorners[0][1],
             }[anchorPoint % 3],
             {
                 0: this._blueprintCorners[1][0],
-                1: (this._blueprintCorners[1][1] - this._blueprintCorners[1][0]) / 2,
+                1: (this._blueprintCorners[1][1] + this._blueprintCorners[1][0]) / 2,
                 2: this._blueprintCorners[1][1],
             }[~~(anchorPoint / 3)]
         ];
